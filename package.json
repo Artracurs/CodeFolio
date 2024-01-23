@@ -1,0 +1,17 @@
+{
+  "name": "codefolio",
+  "version": "1.0.0",
+  "description": "CodeFolio is an innovative web-based resume that syncs with your GitHub account to display the latest information about your projects, skills, and achievements. Designed to showcase professional growth, CodeFolio keeps your portfolio up-to-date and dynamic.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.5",
+    "dotenv": "^16.4.0",
+    "express": "^4.18.2"
+  }
+}
