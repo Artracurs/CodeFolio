@@ -3,3 +3,20 @@ $white: #fff;
 $black: #000;
 $gray: #A9A9A9;
 $blue: #0085FF;
+
+$aspect-ratio: calc(1782/764);
+
+$width: 764px;
+$height: 1080px;
+
+
+// @media (max-width: 768px) {
+//       $height: calc(90% * $aspect-ratio); 
+//       $width: calc(90% * $aspect-ratio);
+//     }
+  
+//   @media (max-width: 480px) {
+//     $height: calc(40% * $aspect-ratio); 
+//     $width: calc(40% * $aspect-ratio);
+
+// }

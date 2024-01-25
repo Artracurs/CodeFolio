@@ -1,0 +1,84 @@
+@import "../../colors";
+
+.container {
+    display: grid;
+    grid-template-columns: 228px 1fr;
+
+    .left {
+        border: 1px solid gray;
+    }
+
+    .main {
+        width: 536px;
+        .header {
+            height: 195px;
+            background-color: $gold;
+            color: $black;
+            padding-left: 33px;
+        }
+        .name {
+            margin: 0;
+            padding-top: 44px;
+            font-size: 32px;
+            font-family: "Istok Web", sans-serif;
+        }
+        .position {
+            font-size: 20px;
+            margin: 0;
+        }
+        .telegram {
+            display: flex;
+            width: 123px;
+            height: 25px;
+            background-color: $blue;
+            justify-content: center;
+            align-items: center;
+            border-radius: 60px;
+            font-size: 10px;
+            color: $white;
+        }
+        .info {
+            height: 32px;
+            display: flex;
+            background-color: $black;
+            align-items: center;
+            width: 536px;
+
+            div {
+                padding-left: 20px;
+                width: 388px;
+                justify-content: space-between;
+                display: flex;
+                width: 388px;
+
+                span {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .about {
+            div {
+                padding: 0 20px 0 20px;
+                .aboutHeader {
+                    font-size: 14px;
+                }
+                .aboutText {
+                    padding: 0 0 0 15px;
+                    font-size: 10px;
+                }
+
+            }
+        }
+    }
+
+    .footer {
+        height: 46px;
+        position: relative;
+        border: 1px solid gray;
+        width: $width;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+}

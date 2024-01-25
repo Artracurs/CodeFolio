@@ -1,11 +1,12 @@
 import './App.css'
-import ProjectsList from './Components/ProjectsList'
+import Pages from './Pages/Pages/Pages'
+
 
 function App() {
 
   return (
     <>
-      <ProjectsList />
+      <Pages />
     </>
   )
 }

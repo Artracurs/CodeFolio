@@ -1,5 +1,4 @@
 import s from './Header.module.scss'
-import React from 'react'
 
 type Props = {}
 

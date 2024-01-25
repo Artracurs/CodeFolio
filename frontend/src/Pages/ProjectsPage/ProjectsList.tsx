@@ -1,5 +1,4 @@
-import React from 'react'
-import Header from './Projects/Header'
+import Header from '../../Components/Header/Header'
 
 type Props = {}
 
