@@ -2,7 +2,10 @@ require('dotenv').config();
 
 const express = require('express');
 const axios = require('axios');
+const cors = require('cors'); //
 const app = express();
+
+app.use(cors());
 
 const port = process.env.PORT;
 const host = process.env.HOST;
@@ -40,13 +43,47 @@ app.get('/github-languages/:username', async (req, res) => {
                 releases: releases, // Add releases data
             };
         }));
-
         res.json(formattedData);
     } catch (error) {
         res.status(500).send('Error fetching data from GitHub');
     }
 });
 
+app.get('/github-avatar/:username', async (req, res) => {
+  const username = req.params.username;
+  const token = process.env.GITHUB_TOKEN;
+  const headers = { 'Authorization': `token ${token}` };
+
+  try {
+      const userProfileResponse = await axios.get(`https://api.github.com/users/${username}`, { headers });
+      const avatarUrl = userProfileResponse.data.avatar_url;
+      
+      res.json({ username: username, avatar_url: avatarUrl });
+  } catch (error) {
+      console.error('Error fetching user profile from GitHub:', error);
+      res.status(500).send('Error fetching user avatar from GitHub');
+  }
+});
+
+app.get('/github-bio/:username', async (req, res) => {
+  const username = req.params.username;
+  const token = process.env.GITHUB_TOKEN; // Ensure you have a GitHub token set in your environment variables
+  const headers = { 'Authorization': `token ${token}` };
+
+  try {
+      const userProfileResponse = await axios.get(`https://api.github.com/users/${username}`, { headers });
+      const userProfile = userProfileResponse.data;
+
+      // Extracting the biography and GitHub profile URL
+      const bio = userProfile.bio || "No biography available";
+      const htmlUrl = userProfile.html_url; // Link to the user's GitHub profile
+
+      res.json({ username: username, bio: bio, github_profile: htmlUrl });
+  } catch (error) {
+      console.error('Error fetching user bio and profile link from GitHub:', error);
+      res.status(500).send('Error fetching user information from GitHub');
+  }
+});
 
 
 app.listen(port, host, () => {

@@ -1,0 +1,31 @@
+@import '../../colors';
+
+.container {
+  margin: 0 0 20px 0;
+  
+  .title {
+    color: $black;
+    font-size: 14px;
+  }
+  .position {
+    color: $gold;
+    font-size: 14px;
+  }
+  .date {
+    color: $gray;
+    font-size: 11px;
+
+  }
+  div {
+    font-size: 10px;
+  }
+  .additionalList {
+    padding-left: 15px;
+    padding-top: 5px;
+    margin-bottom: 20px;
+  }
+  .respo {
+    margin-top: 5px;
+    margin-left: 20px;
+  }
+}
