@@ -2,4 +2,43 @@
 
 .container {
 
+  .projects {
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+
+  .name {
+    font-size: 14px;
+    background-color: $gold;
+    border-radius: 20px;
+    padding: 1px 5px 1px 5px;
+    text-decoration: none;
+  }
+  .date {
+    font-size: 14px;
+    color: $gray;
+  }
+  .link {
+    font-size: 12px;
+    color: $gray;
+    margin: 5px 0 0 0;
+  }
+  .description {
+    font-style: italic;
+    font-size: 12px;
+    padding-left: 30px;
+  }
+  .release {
+    background-color: $gray;
+    color: $white;
+    line-height: 1.5;
+    font-size: 11px;
+    padding: 1px 5px 1px 5px;
+    border-radius: 30px;
+  }
+  .lang {
+    font-size: 10px;
+    font-style: italic;
+    color: $gray;
+  }
 }

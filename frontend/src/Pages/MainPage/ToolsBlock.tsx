@@ -18,7 +18,6 @@ export default function ToolsBlock({}: Props) {
     }
   ];
   
-
   return (
     <div className={s.container}>
       <p>НАВЫКИ</p>

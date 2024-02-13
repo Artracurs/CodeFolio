@@ -7,7 +7,7 @@ export default function AvatarBlock({}: Props) {
   const [avatarUrl, setAvatarUrl] = useState('');
 
   useEffect(() => {
-    fetch('http://192.168.43.216:3002/github-avatar/lanneq-dev')
+    fetch('http://192.168.43.216:3002/github-avatar/Artracurs')
       .then(response => response.json())
       .then(data => {
         setAvatarUrl(data.avatar_url);                

@@ -21,7 +21,7 @@ const ProjectsList = () => {
 
   return (
     <div className={s.container}>
-        {projects.slice(0, 9).map((project, index) => (
+        {projects.map((project, index) => (
           <div key={index}>
             <strong className={s.title}><a href={project.html_url}>{project.name}</a></strong> - <span className={s.description}>{project.description !== 'No description' && project.description} </span>
           </div>

@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors'); //
+const req = require('express/lib/request');
 const app = express();
 
 app.use(cors());
@@ -84,6 +85,15 @@ app.get('/github-bio/:username', async (req, res) => {
       res.status(500).send('Error fetching user information from GitHub');
   }
 });
+
+app.get('/github-tools', async (req, res) => {
+  const toolsList = [{}]
+  try {
+    res.json({toolsList})
+  } catch (error) {
+    res.status(500).send('error fetching tools list from server')
+  }
+})
 
 
 app.listen(port, host, () => {
